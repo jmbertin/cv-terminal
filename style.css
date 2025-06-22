@@ -103,8 +103,8 @@ body {
   font-weight: bold;
   cursor: pointer;
   display: flex;
-  align-items: center;      /* centre verticalement */
-  justify-content: center;  /* centre horizontalement */
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 0 10px #00ff00;
   z-index: 999;
 }
