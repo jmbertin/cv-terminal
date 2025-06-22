@@ -6,6 +6,28 @@ body {
   font-size: 16px;
 }
 
+#mobile-warning {
+  position: fixed;
+  z-index: 1000;
+  background: #000;
+  color: #fff;
+  font-family: monospace;
+  font-size: 18px;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.warning-content {
+  max-width: 90%;
+}
+
 #terminal {
     display: none;
   padding: 1rem;
@@ -63,4 +85,44 @@ body {
 .prompt {
   color: #00ff00;
   font-weight: bold;
+}
+
+#auto-btn {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  background-color: #00ff00;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 0 10px #00ff00;
+}
+
+#auto-btn:hover {
+  background-color: #0f0;
+}
+
+#auto-tip {
+  position: fixed;
+  bottom: 4.5rem;
+  left: 1rem;
+  background: #222;
+  color: #fff;
+  font-family: monospace;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 14px;
+  opacity: 0.8;
+  z-index: 998;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 13px;
+  }
 }
