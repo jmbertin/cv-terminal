@@ -30,7 +30,7 @@ Driven by innovation, low-level optimization, and secure-by-design principles.
 Always exploring new technologies and pushing boundaries.`,
   "skills": `- Systems Administration (Linux, Docker, Proxmox)\n- Cybersecurity / Pentesting\n- Web Development (Fullstack)\n- Embedded Software / Low-level Dev\n- Game Dev & Robotics (Arduino, RPi)\n- DevSecOps & CI/CD tools`,
   "languages": `- French (native)\n- English (fluent)\n- C, Python, JavaScript`,
-  "experience": `2025 – now: DevSecOps Engineer @ Thales\n2024 – now: Coding Instructor @ Tio Code School\n2024: CISO @ Somanity\n2018 – now: Head of Canine Unit, Police Training @ City of Nice\n2004 – 2018: Surveillance & Video Ops @ City of Nice`,
+  "experience": `2025 – now: DevSecOps Engineer @ Thales\n2024 – now: Coding Instructor @ Tio Code School\n2024: CISO @ Somanity\n2018 – 2023: Head of Canine Unit, Police Training @ City of Nice\n2004 – 2017: Surveillance & Video Ops @ City of Nice`,
   "education": `2025 – 42 Nice, Master Level (RNCP VII)\n  - Info Systems & Networks\n  - Data & Database Architecture\n2024 – 42 Nice, Bachelor Level (RNCP VI)\n  - Web & Mobile Development\n  - Software Engineering\nTop 1% performer globally - 42 Network`,
   "certifications": `- CEH (CISCO), 2023\n- Google Cybersecurity, 2023\n- BPI France Cybersecurity, 2023`,
   "contact": `📍 Carros, France\n📞 +33 7 69 72 94 35\n✉️ jeanmichel.bertin42@gmail.com\n🔗 LinkedIn: linkedin.com/in/jean-michel-bertin42\n💻 GitHub: github.com/jmbertin`,
