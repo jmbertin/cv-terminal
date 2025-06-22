@@ -54,9 +54,9 @@ input.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
         const cmd = input.value.trim();
         print(`jmbertin@github.com:~$ ${cmd}`);
-    if (cmd === "clear") {
+    if (cmd.toLowerCase() === "clear") {
         output.innerText = "";
-    } else if (cmd === "auto") {
+    } else if (cmd.toLowerCase() === "auto") {
         print(commands[cmd]);
         runAutoShowcase();
     } else {
