@@ -36,7 +36,7 @@ const commands = {
     education: `2025 – 42 Nice, Master Level (RNCP VII)\n  - Info Systems & Networks\n  - Data & Database Architecture\n2024 – 42 Nice, Bachelor Level (RNCP VI)\n  - Web & Mobile Development\n  - Software Engineering\nTop 1% performer globally - 42 Network`,
     certifications: `- CEH (CISCO), 2023\n- Google Cybersecurity, 2023\n- BPI France Cybersecurity, 2023`,
     contact: `📍 Carros, France\n📞 +33 7 69 72 94 35\n✉️ jeanmichel.bertin42@gmail.com\n🔗 LinkedIn: linkedin.com/in/jean-michel-bertin42\n💻 GitHub: github.com/jmbertin`,
-    help: "Available commands:\nwhoami, bio, skills, experience, education, certifications, languages, contact, clear, auto",
+    help: "Available commands:\nwhoami, bio, skills, experience, education, certifications, languages, contact, clear, auto, download",
     clear: "",
     auto: "Starting automatic showcase...\n",
     download: "Preparing PDF download...",
