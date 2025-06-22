@@ -105,7 +105,16 @@ async function showBootSequence() {
   boot.style.display = "none";
   document.getElementById("terminal").style.display = "block";
 
-  const now = new Date().toString();
+  const now = new Date().toLocaleString("en-US", {
+    weekday: "short",
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    timeZoneName: "short"
+  });
   print(`Last login: ${now} on tty1`);
   print("Welcome to jmbertin's terminal. Type 'help' to list available commands or 'auto' to run automatic showcase.");
 }
