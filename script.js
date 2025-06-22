@@ -56,30 +56,30 @@ function print(text) {
 }
 
 input.addEventListener("keydown", (e) => {
-if (e.key === "Enter") {
-    const cmd = input.value.trim();
-    print(`jmbertin@github.com:~$ ${cmd}`);
-    if (cmd.toLowerCase() === "clear") {
-        output.innerText = "";
-    } else if (cmd.toLowerCase() === "auto") {
-        print(commands[cmd]);
-        runAutoShowcase();
-    } else if (cmd.toLowerCase() === "download") {
-        print(commands[cmd]);
-        const link = document.createElement("a");
-        link.href = "CV-Jean-Michel-Bertin.pdf";
-        link.download = "CV-Jean-Michel-Bertin.pdf";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        print("Download started: CV-Jean-Michel-Bertin.pdf");
-    } else {
-        print(commands[cmd] || `Unknown command: ${cmd}\nType 'help' to list available commands.`
-        );
+    if (e.key === "Enter") {
+        const cmd = input.value.trim();
+        print(`jmbertin@github.com:~$ ${cmd}`);
+        if (cmd.toLowerCase() === "clear") {
+            output.innerText = "";
+        } else if (cmd.toLowerCase() === "auto") {
+            print(commands[cmd]);
+            runAutoShowcase();
+        } else if (cmd.toLowerCase() === "download") {
+            print(commands[cmd]);
+            const link = document.createElement("a");
+            link.href = "CV-Jean-Michel-Bertin.pdf";
+            link.download = "CV-Jean-Michel-Bertin.pdf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            print("Download started: CV-Jean-Michel-Bertin.pdf");
+        } else {
+            print(commands[cmd] || `Unknown command: ${cmd}\nType 'help' to list available commands.`
+            );
+        }
+        input.value = "";
+        window.scrollTo(0, document.body.scrollHeight);
     }
-    input.value = "";
-    window.scrollTo(0, document.body.scrollHeight);
-}
 });
 
 async function simulateCommand(cmd) {
@@ -97,6 +97,9 @@ async function simulateCommand(cmd) {
 }
 
 async function showBootSequence() {
+    if (isMobile) {
+        boot.style.fontSize = "12px";
+    }
     for (let i = 0; i < bootLines.length - 1; i++) {
         boot.innerText += bootLines[i] + "\n";
         const delay = Math.floor(Math.random() * (400 - 50 + 1)) + 50;
@@ -175,15 +178,25 @@ async function runAutoShowcase() {
 }
 
 window.onload = () => {
+  const showPowerScreen = () => {
+    const powerScreen = document.getElementById("boot-power-screen");
+    powerScreen.style.display = "flex";
+
+    document.getElementById("power-btn").onclick = () => {
+      powerScreen.remove();
+      showBootSequence();
+    };
+  };
+
   if (isMobile) {
     const warning = document.getElementById("mobile-warning");
     warning.style.display = "flex";
 
     setTimeout(() => {
       warning.style.display = "none";
-      showBootSequence();
+      showPowerScreen();
     }, 4000);
   } else {
-    showBootSequence();
+    showPowerScreen();
   }
 };
