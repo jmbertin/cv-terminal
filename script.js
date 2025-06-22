@@ -4,6 +4,8 @@ const boot = document.getElementById("boot");
 
 const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
+let isAutoMode = false;
+
 const bootLines = [
     "PhoenixBIOS 4.0 Release 6.0     ",
     "Copyright 1985-2001 Phoenix Technologies Ltd.",
@@ -89,7 +91,9 @@ async function simulateCommand(cmd) {
     }
     input.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter" }));
     input.disabled = false;
-    input.focus();
+    if (!isAutoMode) {
+        input.focus();
+    }
 }
 
 async function showBootSequence() {
@@ -150,6 +154,7 @@ async function showBootSequence() {
 }
 
 async function runAutoShowcase() {
+    isAutoMode = true;
     const sequence = [
         "whoami",
         "bio",
@@ -165,6 +170,8 @@ async function runAutoShowcase() {
         await new Promise((r) => setTimeout(r, 1500));
         await simulateCommand(cmd);
     }
+    isAutoMode = false;
+    input.focus();
 }
 
 window.onload = () => {
