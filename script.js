@@ -91,6 +91,8 @@ async function showBootSequence() {
   const loginInput = document.getElementById("login-input");
   const username = "jmbertin";
 
+  await new Promise(r => setTimeout(r, 1000));
+  
   for (let i = 0; i < username.length; i++) {
     loginInput.innerText += username[i];
     await new Promise(r => setTimeout(r, 150));
@@ -109,9 +111,9 @@ async function showBootSequence() {
 }
 
 async function runAutoShowcase() {
-  const sequence = ["whoami", "skills", "experience", "certifications", "contact"];
+  const sequence = ["whoami", "bio", "skills", "experience", "education", "certifications", "languages", "contact"];
   for (const cmd of sequence) {
-    await new Promise(r => setTimeout(r, 1000));
+    await new Promise(r => setTimeout(r, 1500));
     await simulateCommand(cmd);
   }
 }
