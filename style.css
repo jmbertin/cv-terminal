@@ -153,6 +153,7 @@ body {
 
 #power-btn {
   font-size: 48px;
+  font-family: "Segoe UI Symbol", "Arial Unicode MS", "monospace", sans-serif;
   background: none;
   border: 3px solid #00ff00;
   border-radius: 50%;
