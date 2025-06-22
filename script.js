@@ -39,6 +39,7 @@ const commands = {
     help: "Available commands:\nwhoami, bio, skills, experience, education, certifications, languages, contact, clear, auto",
     clear: "",
     auto: "Starting automatic showcase...\n",
+    download: "Preparing PDF download...",
 };
 
 function print(text) {
@@ -61,6 +62,15 @@ if (e.key === "Enter") {
     } else if (cmd.toLowerCase() === "auto") {
         print(commands[cmd]);
         runAutoShowcase();
+    } else if (cmd.toLowerCase() === "download") {
+        print(commands[cmd]);
+        const link = document.createElement("a");
+        link.href = "CV-Jean-Michel-Bertin.pdf";
+        link.download = "CV-Jean-Michel-Bertin.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        print("Download started: CV-Jean-Michel-Bertin.pdf");
     } else {
         print(commands[cmd] || `Unknown command: ${cmd}\nType 'help' to list available commands.`
         );
@@ -149,6 +159,7 @@ async function runAutoShowcase() {
         "certifications",
         "languages",
         "contact",
+        "download",
     ];
     for (const cmd of sequence) {
         await new Promise((r) => setTimeout(r, 1500));
@@ -169,4 +180,3 @@ window.onload = () => {
     showBootSequence();
   }
 };
-
